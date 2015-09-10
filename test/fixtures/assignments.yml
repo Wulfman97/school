@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  points_pos: 1
+  point_earned: 1
+  grade_earned: MyString
+
+two:
+  title: MyString
+  points_pos: 1
+  point_earned: 1
+  grade_earned: MyString
