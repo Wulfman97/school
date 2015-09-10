@@ -1,2 +1,5 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+<h1> Course </h1>
+<h2><%= @course.title %></h2>
+<h3><%= @course.subject %></h2>
+<p><%= @course.code %></p>
+<%= link_to 'Back', courses_path %>
