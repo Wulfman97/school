@@ -1,2 +1,12 @@
-<h1>Quizzes#new</h1>
-<p>Find me in app/views/quizzes/new.html.erb</p>
+<%= form_for [@course, @quiz] do |f| %>
+   <%= f.hidden_field :course_id, value: @course.id %>
+   <p><%= f.label :title %></p>
+   <p><%= f.text_field :title %></p>
+   <p><%= f.label :points_pos %></p>
+   <p><%= f.text_area :points_pos %></p>
+   <p><%= f.label :point_earned %></p>
+   <p><%= f.text_area :point_earned %></p>
+   <p><%= f.label :grade_earned %></p>
+   <p><%= f.text_area :grade_earned %></p>
+   <p><%= f.submit %></p>
+ <% end %>

@@ -2,13 +2,15 @@
 <h2><%= @course.title %></h2>
 <h3><%= @course.subject %></h2>
 <p><%= @course.code %></p>
-<% @quizzes.each do |quiz| %>
-<%= @quiz.title %>
-<%= @quiz.points_pos %>
-<%= @quiz.point_earned %>
-<%= @quiz.grade_earned %>
+<%= link_to 'Add Quiz', new_course_quiz_path(@course) %>
 
-<%= link_to "Edit Quiz", edit_course_quiz_path(quiz, @course) %>
-<%= link_to "Delete Quiz", [@course, quiz], method: :delete, data: {confirm: "are you sure?"} %>
+<% @quizzes.each do |quiz| %>
+ <%= quiz.title %>
+ <%= quiz.points_pos %>
+ <%= quiz.point_earned %>
+ <%= quiz.grade_earned %>
+ <%= link_to "Edit Quiz", edit_course_quiz_path(quiz, @course) %>
+ <%= link_to "Delete Quiz", [@course, quiz], method: :delete, data: {confirm: "are you sure?"} %>
 <% end %>
-<%= link_to 'Back', courses_path %>
+
+ <!-- link_to 'Back', courses_path -->

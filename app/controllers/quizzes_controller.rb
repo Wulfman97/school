@@ -1,7 +1,9 @@
 class QuizzesController < ApplicationController
   def new
     @course = Course.find(params[:course_id])
+    # byebug
     @quiz = @course.quizzes.new
+    # raise
   end
 
   def create
@@ -40,6 +42,6 @@ class QuizzesController < ApplicationController
 private
 
   def quiz_params
-      params.require(:quiz).permit (:title, :points_pos, :point_earned, :grade_earned)
+      params.require(:quiz).permit(:title, :points_pos, :point_earned, :grade_earned, :course_id)
   end
 end
