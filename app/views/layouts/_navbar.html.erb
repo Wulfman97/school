@@ -1,3 +1,20 @@
-<%= link_to 'Courses', courses_path %> |
-<%= link_to 'Students', students_path %> |
-<%= link_to 'Teachers', teachers_path %>
+
+<nav>
+  <div class="nav-wrapper purple">
+    <a href="#!" class="brand-logo">School</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to 'Courses', courses_path %></li>
+      <li><%= link_to 'Students', students_path %></li>
+      <li><%= link_to 'Teachers', teachers_path %></li>
+    </ul>
+
+     <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to 'Courses', courses_path %></li>
+      <li><%= link_to 'Students', students_path %></li>
+      <li><%= link_to 'Teachers', teachers_path %></li>
+    </ul>
+  </div>
+</nav>
+
+
