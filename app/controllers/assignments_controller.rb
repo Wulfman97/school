@@ -39,7 +39,7 @@ class AssignmentsController < ApplicationController
   private
 
   def assignment_params
-      params.require(:assignment).permit (:title, :points_pos, :point_earned, :grade_earned)
+      params.require(:assignment).permit(:title, :points_pos, :point_earned, :grade_earned, :course_id)
   end
 
 end

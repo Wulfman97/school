@@ -1,9 +1,7 @@
 class QuizzesController < ApplicationController
   def new
     @course = Course.find(params[:course_id])
-    # byebug
     @quiz = @course.quizzes.new
-    # raise
   end
 
   def create
